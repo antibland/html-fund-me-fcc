@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fund Me App</title>
+        <style>
+            .grid {
+                display: grid;
+                grid-template-areas:
+                    "button1 button2"
+                    "button3 button4"
+                    "input input";
+                grid-template-columns: 1fr 1fr;
+                gap: 0.25rem;
+            }
+
+            #btnGetBalance {
+                grid-area: button1;
+            }
+            #btnConnect {
+                grid-area: button2;
+            }
+            #btnFund {
+                grid-area: button3;
+            }
+            #btnWithdraw {
+                grid-area: button4;
+            }
+            .grid > div {
+                grid-area: input;
+                justify-self: center;
+            }
+            .grid label {
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="./index.js" type="module"></script>
+        <h1>Basic Fund Me dApp</h1>
+        <div class="grid">
+            <button id="btnGetBalance">Get Balance</button>
+            <button id="btnConnect">Connect</button>
+            <button id="btnFund">Fund</button>
+            <button id="btnWithdraw">Withdraw</button>
+            <div>
+                <label for="ethAmount">Eth Amount</label>
+                <input required type="text" id="ethAmount" placeholder="0.1" />
+            </div>
+        </div>
+    </body>
+</html>
